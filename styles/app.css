@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* colores */
+    --background: ghostwhite;
+    --casillas-oscuras: rgb(33, 75, 82);
+    --casillas-claras: rgb(236, 236, 255);
+    --sombras: rgb(34, 34, 34);
+    --casillas-hover: rgb(48, 147, 204);
+    --casillas-hover-js: rgba(48, 147, 204, 0.192);
+    --casillas-hover-160: rgba(80, 162, 209, 0.68);
+
+    /* fuentes */
+    --shantell-sans: 'Shantell Sans', cursive;
+}
+
+/* estilos generales */
+body {
+    background-color: var(--background);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* contenedor extereor tablero */
+.contenedor {
+    background-color: var(--casillas-claras);
+    border: 3px solid rgb(0, 0, 0);
+    padding: 35px;
+    box-shadow: 0 0 30px var(--sombras);
+    position: relative;
+}
+
+/* tablero ajedrez */
+.tablero {
+    width: 640px;
+    height: 648px;
+    border: 4px solid black;
+}
+
+
+/* casillas del tablero */
+.contenedor-casillas {
+    display: flex;
+}
+
+/* posiciones tablero */
+.contenedor-letras {
+    display: flex;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: var(--shantell-sans);
+    gap: 64px;
+    position: relative;
+    top: 5px;
+    left: 25px;
+}
+
+.contenedor-numeros {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: absolute;
+    left: 8px;
+    top: 50px;
+    font-size: 25px;
+    font-family: var(--shantell-sans);
+}
+
+
+.casillas {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.casillas:hover {
+    background-color: var(--casillas-hover);
+    transition: 0.5s;
+}
+
+.casillas-negras {
+    background-color: var(--casillas-oscuras);
+    transition: 0.5s;
+}
+
+.casillas-blancas {
+    background-color: var(--casillas-claras);
+    transition: 0.5s;
+}
+
+/* estilos a figuras del tablero */ 
+.piezas-tablero {
+    width: 50px;
+    height: 72px;
+    transition: 0.5s;
+}
+
+.piezas-blancas {
+    width: 45px;
+    height: 65px;
+}
+
+.img-caballo-izquierdo {
+    transform: scaleX(-1);
+}
+
+
